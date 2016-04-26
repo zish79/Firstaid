@@ -1,0 +1,106 @@
+<section class="login-wrap">
+  <div class="container form-container">
+    <div class="form-wrap"> 
+      <!-- multistep form -->
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="msform" ng-submit="patientBasicInfo(user, preferredHCPGender)">
+            <fieldset>
+              <div class="form-branding"> <img src="modules/core/client/img/medicheck-logo.png" class="img-responsive" alt="MediCheck"> </div>
+              <div class="form-subtitle"> <span class="fs-title">Please fill in your basic profile</span> </div>
+              <div class="form-group">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                	<label class="control-label">First Name</label>
+                  <input type="text" class="form-control" placeholder="First Name" ng-model="user.firstName">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                 <label class="control-label">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Last Name" ng-model="user.lastName">  
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                <label class="control-label">Personal ID</label>
+                  <input type="text" class="form-control" placeholder="Personal ID" ng-model="user.username">
+                </div>
+              </div>
+              <div class="form-group radio-align">
+                <div class="col-lg-12">
+                  <p>I Prefer a</p>
+                </div>
+                <div class="col-lg-3">
+                  <div class="radio">
+                    <input id="preferredMale" type="radio" name="preferDoc" ng-model="preferredHCPGender" value="Male">
+                    <label for="preferredMale" class="radio-label">Male</label>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="radio">
+                    <input id="preferredFemale" type="radio" name="preferDoc" ng-model="preferredHCPGender" value="Female">
+                    <label for="preferredFemale" class="radio-label">Female</label>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="radio">
+                    <input id="preferredBoth" type="radio" name="preferDoc" ng-model="preferredHCPGender" value="Both">
+                    <label for="preferredBoth" class="radio-label">Both</label>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                <label class="control-label">Language</label>
+                  <select class="form-control" ng-model="user.language">
+                    <option>--</option>
+                    <option>English</option>
+                    <option>French</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                 <label class="control-label">City</label>
+                  <input type="text" class="form-control" placeholder="City" ng-model="user.city">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                 <label class="control-label">Postal Code</label>
+                  <input type="text" class="form-control" placeholder="Postal Code" ng-model="user.postalCode">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                 <label class="control-label">Email</label>
+                  <input type="text" class="form-control" placeholder="Email" ng-model="user.email">
+                </div>
+              </div>
+              <!--<a class="next action-button" ui-sref="patient-info.next-step({user: user})">Next</a>-->
+              <input type="submit" name="next" class="next action-button" value="Next">
+              <a class="next">Skip</a>
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Social Profiles</h2>
+              <h3 class="fs-subtitle">Your presence on the social network</h3>
+              <input type="text" name="twitter" placeholder="Twitter">
+              <input type="text" name="facebook" placeholder="Facebook">
+              <input type="text" name="gplus" placeholder="Google Plus">
+              <input type="button" name="previous" class="previous action-button" value="Previous">
+              <input type="button" name="next" class="next action-button" value="Next">
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Personal Details</h2>
+              <h3 class="fs-subtitle">We will never sell it</h3>
+              <input type="text" name="fname" placeholder="First Name">
+              <input type="text" name="lname" placeholder="Last Name">
+              <input type="text" name="phone" placeholder="Phone">
+              <textarea name="address" placeholder="Address"></textarea>
+              <input type="button" name="previous" class="previous action-button" value="Previous">
+              <input type="submit" name="submit" class="submit action-button" value="Submit">
+            </fieldset>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

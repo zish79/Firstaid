@@ -1,0 +1,105 @@
+<section class="login-wrap">
+  <div class="container form-container">
+    <div class="form-wrap"> 
+      <!-- multistep form -->
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="msform" ng-submit="saveHcpInfo(hcp)">
+            <fieldset>
+              <div class="form-heading"><h1>My Professional Profile</h1></div>
+              <div class="form-subtitle"> <span class="fs-title">Please fill in your professional profile</span> </div>
+              <div class="form-group">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                	<label class="control-label">Name</label>
+                  <input type="text" class="form-control" placeholder="Name" ng-model="user.firstName">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                 <label class="control-label">Specialist</label>
+                 <select class="form-control" ng-model="hcp.specialization">
+                 <option>--</option>
+                 <option>Akutsjukvård</option>
+                 <option>Allmänmedicin</option>
+                 <option>Anestesi och Intensivvård</option>
+                 <option>Arbets- och miljömedicin</option>
+                 <option>Barn- och ungdomsmedicin</option>
+                 <option>Barn- och ungdomsneurologi</option>
+                 <option>Dermatologi</option>
+                 <option>Endokrinologi och Diabetologi</option>
+                 <option>Gastroenterologi</option>
+                 <option>Geriatrik</option>
+                 <option>Gynekologi och Obstetrik</option>
+                 <option>Hematologi</option>
+                 <option>Infektionsmedicin</option>
+                 <option>Internmedicin</option>
+                 <option>Kardiologi</option>
+                 <option>Lungsjukdomar och Allergologi</option>
+                 <option>Neonatologi</option>
+                 <option>Neurologi</option>
+                 <option>Njurmedicin</option>
+                 <option>Onkologi</option>
+                 <option>Ortopedi</option>
+                 <option>Palliativ vård</option>
+                 <option>Psykiatri</option>
+                 <option>Rehabiliteringsmedicin</option>
+                 <option>Reumatologi</option>
+                 <option>Rättsmedicin</option>
+                 <option>Urologi</option>
+                 <option>Ögonsjukdomar</option>
+                 </select>
+                   
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                <label class="control-label">Personal Description</label>
+                  <input type="text" class="form-control" placeholder="Personal Description" ng-model="hcp.personalDescription">
+                </div>
+              </div>
+              
+              <div class="clearfix"></div>
+              <div class="form-group">
+                <div class="col-xs-12">
+                <label class="control-label">Certificates</label>
+                <div class="clearfix"></div>
+                 <label class="control-label custom-fileupload-label">
+                 <ul>
+                    <!-- The file uploads will be shown here -->
+                 </ul>
+                 </label>
+                  <div id="drop" class="custom-fileupload">
+                    <a><img src="../img/upload-icon.png" alt="upload icon"/>Upload</a>
+                    <input type="file" name="upl" multiple />
+                  </div> 
+                  <!--<input type="text" class="form-control" placeholder="Certificates">-->
+                </div>
+              </div>
+                <div class="form-group">
+                <div class="col-xs-12">
+                 <label class="control-label">Insurance</label>
+                  <input type="text" class="form-control" placeholder="Insurance" ng-model="hcp.insurance">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                 <label class="control-label">IVO</label>
+                  <input type="text" class="form-control" placeholder="IVO" ng-model="hcp.iov">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                 <label class="control-label">Other information ?</label>
+                  <input type="text" class="form-control" placeholder="Other Information" ng-model="hcp.otherInfo">
+                </div>
+              </div>
+              <a ui-sref="hcp-info.complete-profile" class="btn-client-profile-cancel">Back</a>
+              <!--<input type="button" name="back" class="back action-button" value="Back">-->
+              <input type="submit" name="next" class="next action-button" value="Next">
+              <a class="next">Skip</a>
+            </fieldset>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

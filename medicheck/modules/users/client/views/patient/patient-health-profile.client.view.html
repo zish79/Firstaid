@@ -1,0 +1,83 @@
+<div>
+  <div class="row title-row">
+    <div class="col-sm-5 col-lg-6 title-left-col">
+			<h1>Health Profile</h1>
+    </div>
+          <div class="col-sm-7 col-lg-6 title-right-col">
+            <a ui-sref="patient-info.edit-profile" class="btn-edit-profile">Edit Profile</a>
+          </div>
+  </div>
+  <div class="clearfix"></div>
+ 	<div class="row">
+	  <div class="col-lg-8">
+			<h4>Overview</h4>
+        <div class="client-content-left-table-wrap table-responsive"> 
+        	<table class="table table-bordered health-profile-table">    
+            <tbody>
+              <tr>
+                <td>
+                  <p><strong>Height:</strong><br/>{{patient.height}}</p>
+                  <p><strong>Weight:</strong><br/>{{patient.weight}}</p>
+                  <p><strong>Are you allergic to pencillin?</strong><br/>{{patient.pencillinAllergy}}</p>
+                  <p><strong>Are there any other pharmaceuticals that you are allergic to, or have experienced adverse from using?</strong><br/>{{patient.drugAllergies}}</p>
+                  <p><strong>Do you have any other known allergy? (i.e. Pets, Pollen)</strong><br/>{{patient.allergies}}</p>
+                  <p><strong>Do you have renal dysfunction?</strong><br/>{{patient.renalDysfunction}}</p>
+                   <p><strong>Do you have, or have had in the past, any serious health problem or disease? (i.e. High Blood Pressure, Dibetics)</strong><br/>{{patient.pastDiseases}}</p>
+                  <p><strong>Are you currently using  any prescription drugs?</strong><br/>{{patient.currentDrugs}}</p>
+                  <p><strong>Are you smoking?</strong><br/>{{patient.smoking}}</p>
+                  <p><strong>Other medical information that you think could be useful for the doctor?</strong><br/>{{patient.medicalInfo}}</p>
+                </td> 
+              </tr>                     
+            </tbody>
+          </table> 
+       </div>
+		</div>
+    <div class="col-lg-4">
+			<h4>Documentation</h4>
+      <div class="client-content-left-table-wrap"> 
+        <form id="upload" method="post" action="" enctype="multipart/form-data">
+          <table class="table table-bordered client-upload-file-table">
+            <tbody>
+              <tr>
+                <td style="height:200px;">
+                  <ul>
+                      	 <!-- The file uploads will be shown here -->
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div id="drop">
+                    <img src="../img/upload-icon.png" alt="upload icon"/><br/>
+                    <a>Click here to upload files</a>
+                    <input type="file" name="upl" multiple />
+                  </div>            
+              		<!--<input type="submit" value="Update Calender" class="btn-submit"/>-->
+          		  </td>
+              </tr>      
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+    <div class="col-lg-4">
+			<h4>My Medications</h4>
+      <div class="client-content-left-table-wrap"> 
+  		  <table class="table table-bordered upcoming-appointment-entry">
+          <tbody>
+            <tr>
+              <td>
+                <p><strong>Treatment / Drug Name:</strong><br/>Ciproxin, Eziday, Disprene</p>
+                <p><strong>Dose:</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                <p><strong>Treatment / Drug Name:</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                <p><strong>Disease:</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                <p><strong>Physicial:</strong><br/>Dr. Alan</p>
+                <p><strong>Health Center:</strong><br/>ABC Health Center</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+ 		  </div>
+    </div>
+  </div>
+</div>         

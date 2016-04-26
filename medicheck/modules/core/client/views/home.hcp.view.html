@@ -1,0 +1,219 @@
+<section ng-show="showContent">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <div class="title-left-col pull-left">
+                <h1>Dashboard</h1><span> / HCP</span>
+            </div>
+            <div class="title-right-col pull-right">
+                <a href="#">Add a New Appointment</a>
+            </div>
+        </div>
+        <div class="row inner-content">
+            <div class="col-lg-6">
+                <h4>Today's Booked Appointments</h4>
+                <div class="blockqoute-wrap">
+                    <blockquote ng-repeat="appointment in todaysBookedAppointments track by $index">
+                        <div class="row blockqoute-row">
+                            <div class="col-xs-2 col-lg-1">
+                                <img src="modules/core/client/img/pic-1.png" />
+                            </div>
+                            <div class="col-xs-10 col-lg-11">
+                                <title>{{appointment.appointeduser.displayName}}</title>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="profile-icon" title="Profile"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="msg-icon" title="Message"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="engage-icon" title="Engage"></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <time>{{ appointment.startTime | amCalendar }}</time>
+                                <p>{{appointment.appointmentDescription}}</p>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h4>Drop In Waiting Room</h4>
+                <div class="blockqoute-wrap">
+                    <blockquote ng-repeat="waiting in dropInWaitingRoom track by $index">
+                        <div class="row blockqoute-row">
+                            <div class="col-xs-2 col-lg-1">
+                                <img src="modules/core/client/img/pic-1.png" />
+                            </div>
+                            <div class="col-xs-10 col-lg-11">
+                                <title>{{waiting.appointeduser.displayName}}</title>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="profile-icon" title="Profile"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="msg-icon" title="Message"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="engage-icon" title="Engage"></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <time>{{ waiting.startTime | amCalendar }}</time>
+                                <p>{{waiting.appointmentDescription}}</p>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="row dash-stats-row">
+            <!--	<div class="col-lg-4 notewidth">-->
+            <div class="col-lg-4">
+
+                <img src="modules/core/client/img/callender.png" class="img-responsive" style="width: 100%; max-height: 594px;" />
+            </div>
+
+            <script>
+                $(document).ready(function() {
+								$('.nav_list').each(function() {
+                                	$(this).click(function() {
+                                    	$(this).toggleClass('active');
+                                    	$('.pushmenu-push').toggleClass('pushmenu-push-toright');
+                                    	$('.pushmenu-left').toggleClass('pushmenu-open');
+                                	});
+									});
+                              });
+            </script>
+
+            <div class="col-lg-4">
+                <img src="modules/core/client/img/clients-graph.png" class="img-responsive" style="width: 100%;" />
+                <div class=" table-responsive graph-table">
+                    <table class="table table-bordered graph-tabs">
+                        <thead>
+                            <tr>
+                                <th><span>Week</span><span class="active">Month</span><span>Year</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span2>APR 2015</span2>
+                                    <span3>21</span3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span2>MAY 2015</span2>
+                                    <span3>48</span3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span2>JUN 2015</span2>
+                                    <span3>35</span3>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+
+                <div class="dash-tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home" class="tab-consultation"><span><img src="modules/core/client/svg/stat_consultation.svg"/></span></a></li>
+                        <li><a data-toggle="tab" href="#menu1" class="tab-stats"><span><img src="modules/core/client/svg/statistics.svg" /></span></a></li>
+                        <li><a data-toggle="tab" href="#menu2" class="tab-rate"><span><img src="modules/core/client/svg/rate.svg"/></span></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <div class=" table-responsive">
+                                <table class="table table-bordered graph-tabs">
+                                    <tbody>
+                                        <tr>
+                                            <td><span>$583</span>
+                                                <br/>
+                                                <span2>Earn This Month</span2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>125</span>
+                                                <br/>
+                                                <span2>Consultation</span2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>035</span>
+                                                <br/>
+                                                <span2>Total Clients</span2>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <div class=" table-responsive">
+                                <table class="table table-bordered graph-tabs">
+                                    <tbody>
+                                        <tr>
+                                            <td><span>$583</span>
+                                                <br/>
+                                                <span2>Earn This Month</span2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>125</span>
+                                                <br/>
+                                                <span2>Consultation</span2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>035</span>
+                                                <br/>
+                                                <span2>Total Clients</span2>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <div class=" table-responsive">
+                                <table class="table table-bordered graph-tabs">
+                                    <tbody>
+                                        <tr>
+                                            <td><span>$583</span>
+                                                <br/>
+                                                <span2>Earn This Month</span2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>125</span>
+                                                <br/>
+                                                <span2>Consultation</span2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>035</span>
+                                                <br/>
+                                                <span2>Total Clients</span2>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Medicheck Dashboard</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Main Style css--->
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- Fontawsome css--->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+<script src="../js/materialize.js"></script>
+<script src="../js/jPushMenu.js"></script>
+<script src="../js/custom.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-6" style="text-align:center; padding-top:20%; ">
+          <a href="#signup-pop" data-lity style="font-size:60px;">Click Me</a>
+         </div>
+        </div>
+      </div>
+
+
+
+<!-------Signup Content----------->  
+<div id="signup-pop" class="lity-hide">
+    <div class="col-lg-12">
+        <h1>Sign up</h1>
+        </div>
+        <form id="signup-form" action="" enctype="multipart/form-data" method="post">
+              <div class="form-group">
+                <div class="col-xs-12">
+                	<label class="control-label">Name</label>
+                  <input type="text" class="form-control" >
+                </div>
+                
+              </div>
+              <div class="form-group radio-align">
+                <div class="col-lg-12">
+                  <p>I am a</p>
+                </div>
+                <div class="col-xs-6 col-lg-2">
+                  <div class="radio">
+                    
+                      <input id="doc" type="radio" name="docPat">
+                      <label for="doc" class="radio-label">Doctor</label>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-lg-2">
+                  <div class="radio">
+                    
+                      <input id="pat" type="radio" name="docPat">
+                     <label for="pat" class="radio-label">Patient</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                <label class="control-label">E-mail</label>
+                  <input type="email" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                <label class="control-label">Password</label>
+                 <input type="password" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+                <label class="control-label">Confirm Password</label>
+                 <input type="password" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
+             <label><input type="checkbox" class="signup-checkbox">
+            <p>I have read and agree to the Terms of Use and Privacy Policy.</p></label>
+                
+                </div>
+              </div>
+
+               <div class="clearfix"></div>
+               <div class="btn-client-edit-wrap">
+             
+              <input type="button" name="save" class="btn-client-profile-save" value="Submit">
+            
+          </form>
+         
+         
+    </div>
+    <button class="lity-close lity-signup-close" type="button" title="Close (Esc)" data-lity-close="">×</button>
+</div>
+
+<!-------See A Doctor Popup Content-----------> 
+
+<!--------Script for Popup-------------->
+<script src="../js/lity.js"></script>
+<!--------Script for Popup-------------->
+                  
+</body>
+</html>

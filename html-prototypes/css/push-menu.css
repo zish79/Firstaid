@@ -1,0 +1,505 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/* General styles for all menus */
+.cbp-spmenu {
+	background: #fbfbfb;
+	position: absolute;
+}
+/* Orientation-dependent styles for the content of the menu */
+.cbp-spmenu-vertical {
+	width: 240px;
+	height: 102%;
+	top: 0;
+	z-index: 1000;
+	overflow-y: inherit;
+}
+.cbp-spmenu-horizontal {
+	width: 100%;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+/* Vertical menu that slides from the left or right */
+.cbp-spmenu-left {
+	left: -188px;
+}
+.cbp-spmenu-right {
+	right: -326px;
+}
+.cbp-spmenu-left.menu-open {
+	left: 0px;
+}
+.cbp-spmenu-right.menu-open {
+	right: 0px;
+}
+/* Horizontal menu that slides from the top or bottom */
+
+.cbp-spmenu-top {
+	top: -150px;
+}
+.cbp-spmenu-bottom {
+	bottom: -150px;
+}
+.cbp-spmenu-top.menu-open {
+	top: 0px;
+}
+.cbp-spmenu-bottom.menu-open {
+	bottom: 0px;
+}
+/* Push classes applied to the body */
+.push-body {
+	position: relative;
+	left: 0;
+}
+.push-padding {
+	padding-left: 68px !important;
+	height:100%;
+}
+.push-body-toright.push-padding {
+	padding-left: 256px !important;
+}
+.push-body-toleft {
+	left: -326px;
+}
+/* Transitions */
+.cbp-spmenu, .push-body {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.cbp-spmenu-left {
+	top: 0;
+	border-right:1px solid #ddd;
+}
+
+.menu-icons
+{
+	background:url(../images/hamburgur.svg) no-repeat;
+	display: block;
+    width: 23px;
+    height: 20px;
+	background-size: 100%;
+}
+.pushMenu
+{
+	height:0;
+}
+.push-body-toright .jPushMenuBtn {
+    left: -16px;
+}
+.jPushMenuBtn {
+    background: #f2f2f2;
+    border: medium none;
+    height: 55px;
+    padding: 10px;
+    position: relative;
+    width: 45px;
+    top: -56px;
+    left: 172px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.jPushMenuBtn:hover {
+    background: #f2f2f2;
+
+}
+.jPushMenuBtn:focus
+{
+	outline:none;	
+}
+.jPushMenuBtn span:first-child {
+    margin-top: 0;
+}
+.jPushMenuBtn span {
+    background: #000;
+    display: block;
+    height: 3px;
+    margin-top: 5px;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+	display:none;
+}
+.menu-active span {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 10px;
+}
+.menu-active span.one {
+    display: none;
+}
+.menu-active span.three {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.cbp-spmenu .user:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.user-link:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.cbp-spmenu .user-link {
+    display: block;
+    padding: 15px;
+}
+.pushuser-img {
+    border: 3px solid #3b3b43;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    float: left;
+    height: 90px;
+    margin-right: 10px;
+    width: 90px;
+}
+.pushuser-img > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 2px solid #fff;
+}
+.pushuser-holder {
+    color: #fff;
+    float: left;
+    font-weight: normal;
+    margin-top: 20px;
+    width: 168px;
+}
+.pushname-user {
+    display: block;
+    font-size: 22px;
+    font-family: "GothamRoundedMedium";
+    line-height: normal;
+}
+.puser-role {
+    display: block;
+    color: #ccc;
+}
+.pushnav {
+    padding: 0 0 100px;
+    margin: 0;
+    list-style: none;
+    background-color: #fbfbfb;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.pushnav > li {
+    display: block;
+    float: none;
+    border-bottom: #d7d7d7 solid 1px;
+    position: relative;
+}
+.pushnav > li:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+.pushnav > li:last-child > a > span {
+    width: 242px;
+}
+.pushnav > li:last-child > a > span br {
+    display: none;
+}
+.menu-open .pushnav > li > a {
+    float: none;
+    background-repeat: no-repeat !important;
+    background-position: 94% center;
+    padding: 14px 22px 14px 20px;
+}
+.menu-open .pushnav > li > a > span {
+    background: none;
+    border: none;
+    display: block;
+    left: auto;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    top: auto;
+    width: auto;
+	font-size: 18px;
+    margin-top: 5px;
+	padding-left:52px;
+}
+
+.pushnav > li:hover > a > span {
+    display: block;
+ /*   background: #30c165;*/
+}
+.pushnav > li > a > span {
+    background: #fbfbfb;
+    border-left: 1px solid #dddddd;
+    display: none;
+    left: 100%;
+    padding: 10px 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 180px;
+    z-index: 99;
+}
+/*.pushnav > li.active a > span {
+    background-color: #30c165;
+    color: #fff;
+	font-size: 18px;
+    padding-left: 20px;
+    float: left;
+}*/
+
+.pushnav > li > a {
+    color: #000;
+    display: block;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 9px 4px;
+    background-image: none;
+    background-repeat: no-repeat !important;
+    overflow: inherit;
+    background-color: #fbfbfb;
+}
+.pushnav > li > a:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+.pushnav > li > a:hover {
+    background-color: #30c165;
+    text-decoration: none;
+	color:#fff;
+}
+.pushnav > li.active > a {
+    background-color: #30c165;
+    color: #fff;
+}
+.menu-open .pushnav > li > a .fa {
+    float: left;
+    position: relative;
+    z-index: 999;
+}
+.pushnav > li > a .fa {
+    float: right;
+    margin-right: 5px;
+    width: 28px;
+    background-position: left top;
+
+    background-repeat: no-repeat;
+    background-size: 26px auto;
+    height: 28px;
+    font-size: 22px;
+}
+.pushnav > li:last-child
+{
+	margin-top:500px;
+	border-top:1px solid #ddd;
+}
+.pushnav > li > a .dasboard-icon {
+    background: url("../images/dashboard.svg") no-repeat center bottom;
+	display: block;
+    width: 34px;
+    height: 33px;
+    background-size: 86%;
+    float: right;
+}
+.pushnav > li.hover .dasboard-icon {
+
+	background: url("../images/dashboard.svg") no-repeat center bottom;
+    display: block;
+    width: 34px;
+    height: 33px;
+    background-size: 86%;
+}
+.pushnav > li.active .dasboard-icon {
+
+	background: url("../images/dashboard.svg") no-repeat center bottom;
+    display: block;
+    width: 34px;
+    height: 33px;
+    background-size: 86%;
+	float:left;
+
+}
+.pushnav > li > a .project-icon {
+    background: url("../images/schedule.svg") no-repeat center top;
+	 display: block;
+    width: 35px;
+    height: 30px;
+    background-size: 86%;
+    float: right;
+}
+.pushnav > li > a:hover .project-icon {
+    background: url("../images/schedule.svg") no-repeat center bottom;
+	 display: block;
+    width: 35px;
+    height: 30px;
+    background-size: 86%;
+}
+.pushnav > li.active .project-icon {
+    background: url("../images/schedule.svg") no-repeat center bottom;
+    display: block;
+    width: 35px;
+    height: 30px;
+    background-size: 86%;
+    float: right;
+}
+.pushnav > li > a .consultation-icon {
+    background: url("../images/consultations.svg") no-repeat center top;
+	 display: block;
+    width: 32px;
+    height: 34px;
+    background-size: 86%;
+    float: right;
+}
+.pushnav > li > a:hover .consultation-icon {
+    background: url("../images/consultations.svg") no-repeat center bottom;
+	 display: block;
+     width: 32px;
+    height: 34px;
+    background-size: 86%;
+
+}
+.pushnav > li.active .consultation-icon {
+    background: url("../images/consultations.svg") no-repeat center bottom;
+	 display: block;
+    width: 32px;
+    height: 34px;
+    background-size: 86%;
+    float: right;
+}
+
+.pushnav > li > a .strategic-icon {
+    background: url("../images/view_profile.svg")  no-repeat center top;
+	 display: block;
+    width: 32px;
+    height: 34px;
+    background-size: 86%;
+    float: right;
+}
+.pushnav > li > a:hover .strategic-icon {
+    background: url("../images/view_profile.svg")  no-repeat center bottom;
+	 display: block;
+    width: 32px;
+    height: 34px;
+    background-size: 86%;
+  
+}
+.pushnav > li.active .strategic-icon {
+    background: url("../images/view_profile.svg")no-repeat center bottom;
+	 display: block;
+    width: 32px;
+    height: 34px;
+    background-size: 86%;
+    float: right;
+}
+
+
+.pushnav > li > a .companies-icon {
+    background: url("../images/support.svg")no-repeat center top;
+	 display: block;
+    width: 32px;
+    height: 29px;
+    background-size: 86%;
+    float: right;
+}
+.pushnav > li > a:hover .companies-icon {
+    background: url("../images/support.svg")no-repeat center bottom;
+	 display: block;
+    width: 32px;
+    height: 29px;
+    background-size: 86%;
+}
+.pushnav > li.active .companies-icon {
+    background: url("../images/support.svg")no-repeat center bottom;
+	 display: block;
+    width: 32px;
+    height: 29px;
+    background-size: 86%;
+    float: right;
+}
+
+
+
+
+
+.pushnav > li > a .catalysit-icon {
+    background-image: url("../images/catalyst-nav-icon.svg");
+}
+.pushnav > li.active .catalysit-icon {
+    background-image: url("../images/catalyst-nav-icon-white.svg");
+}
+
+
+.pushnav > li > a .people-icon {
+    background-image: url("../images/peoples-leftnav.svg");
+}
+.pushnav > li.active .people-icon {
+    background-image: url("../images/peoples-leftnav-white.svg");
+}
+.pushnav > li > a .lesson-icon {
+    background-image: url("../images/lessons.svg");
+    background-position: left 4px;
+}
+.pushnav > li.active .lesson-icon {
+    background-image: url("../images/lessons_white.svg");
+}
+.pushnav > li > a .admin-icon {
+    background-image: url("../images/admin-leftnav.svg");
+}
+.pushnav > li.active .admin-icon {
+    background-image: url("../images/admin-leftnav-white.svg");
+}
+.pushnav > li > a .compliance-icon {
+    background-image: url("../images/compliance_admin.svg");
+}
+.pushnav > li.active .compliance-icon {
+    background-image: url("../images/compliance_admin_white.svg");
+}
+.pushMenu:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+/*scrollbar-css*/
+
+button.push-body .fa-arrow-left {
+    display: none;
+}
+button.push-body .fa-arrow-left {
+    display: none;
+}
+button.menu-active span {
+    display: none;
+}
+button.menu-active .fa-arrow-left {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #fbfbfb;
+    background: #fff;
+    line-height: 22px;
+    padding: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+
+
+

@@ -1,0 +1,93 @@
+<section ng-show="showContent">
+<div class="border">
+	<div class="inner-content">
+          <div class="row title-row">
+        	 <div class="col-sm-5 col-lg-6 title-left-col">
+					<h1>Dashboard</h1><span> / Client</span>
+              </div>
+                <div class="col-sm-7 col-lg-6 title-right-col">
+                    <a ui-sref="appointment-booking.step1">See A Doctor</a>
+                	<a href="#">Add a New Appointment</a>
+                </div>
+           </div>
+           <div class="clearfix"></div>
+             	<div class="row">
+        			<div class="col-lg-8">
+            			<h4>Upcoming Appointments</h4>
+                        <div class="client-content-left-table-wrap table-responsive"> 
+                        	<table class="table table-bordered upcoming-appointment-entry">
+                              <thead>
+                                  <tr>
+                                    <th class="col-xs-4"><p>Doctor Name</p></th>
+                                    <th class="col-xs-2"><p>Date</p></th>
+                                    <th class="col-xs-2"><p>Time</p></th>
+                                    <th class="col-xs-4"><p>Status</p></th>
+                                  </tr>
+                                 </thead>
+                                 <tbody>
+                                  <tr ng-repeat="appointment in patientUpcomingAppointments track by $index">
+                                    <td><img src="{{appointment.appointeduser.profileImageURL}}" height="45px" width="42px"/><span>{{appointment.appointeduser.displayName}}</span></td>
+                                    <td>{{ appointment.startTime | date:'MM/dd/yyyy' }}</td>
+                                    <td>{{ appointment.startTime | date: 'h:mma' }}</td>
+                                    <td>
+                                        <span>
+                                            <span2 class="green-circle"></span2>
+                                            {{appointment.appointmentStatus}}
+                                        </span>
+                                    </td>
+                                  </tr>
+                                 </tbody>
+                             </table> 
+                       </div>
+            		</div>
+                    <div class="col-lg-4">
+                    	<div class="next-appointment-counter">
+                        	<p>Your Next appointment</p>
+                            	<p>Doctor {{authentication.user.firstName}} accepted your request and meeting will be starting in</p>
+                                <div class="clearfix"></div>
+                            	 <span>
+                                    <timer interval="1000" countdown = "timeRemain"> {{hhours}}:{{mminutes}}:{{sseconds}} </timer>
+                                </span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-lg-8">
+            			<h4>Recent Activity</h4>
+                        <div class="client-content-left-table-wrap">           
+                        			<div class="table-responsive">
+                                  <table class="table table-bordered recent-activity-table">
+                                    <tbody>
+                                       <tr>
+                                          <td><span2>You have completed health profile</span2><span3>15 min ago</span3></td>
+                                       </tr>
+                                       <tr>
+                                          <td><span2>You joined Medicheck</span2><span3>30 min ago</span3></td>
+                                       </tr>
+                                    </tbody>
+                                  </table>
+                            </div> 
+                       </div>
+            		</div>
+                    <div class="col-lg-4 client-dashboard-contacts-col">
+            			<h4>Your Medicheck Contacts</h4>
+                        <div class="client-content-left-table-wrap"> 
+                        		 <table class="table table-bordered upcoming-appointment-entry">
+                                     <tbody>
+                                         <tr>
+                                            <td><img src="../img/pic-1.png"/><span>Abrahim Sling</span></td>
+                                         </tr>
+                                         <tr>
+                                            <td><img src="../img/pic-1.png"/><span>Abrahim Sling</span></td>
+                                         </tr>
+                                         <tr>
+                                            <td><img src="../img/pic-1.png"/><span>Abrahim Sling</span></td>
+                                         </tr>
+                                     </tbody>
+                                </table>
+                        </div>
+                    </div>  	
+                </div>
+            </div>
+       </div>
+</section>

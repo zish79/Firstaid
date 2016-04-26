@@ -1,0 +1,40 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.appointment._id ? 'Edit Appointment' : 'New Appointment'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.appointmentForm" class="form-horizontal" ng-submit="vm.save(vm.form.appointmentForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Description</label>
+          <input name="name" type="text" ng-model="vm.appointment.appointmentDescription" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.appointmentForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Appointment name is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="content">Status</label>
+          <textarea name="content" ng-model="vm.appointment.appointmentStatus" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="content">Appointed userID</label>
+          <textarea name="content" ng-model="vm.appointment.appointeduser" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="content">Notes</label>
+          <textarea name="content" ng-model="vm.appointment.HCPNotes" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="content">Start Time</label>
+          <textarea name="content" ng-model="vm.appointment.startTime" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.appointment._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

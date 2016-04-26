@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Medicheck Dashboard</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Main Style css--->
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- Fontawsome css--->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+<script src="../js/materialize.js"></script>
+<script src="../js/jPushMenu.js"></script>
+<script src="../js/custom.js"></script>
+
+<!--------Rating Js------------->
+ <script src="../js/star-rating.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!--------Header Start-------------->
+<header>
+    <!---Mobile Top Header------>
+ 	<div class="container mobile-top-bg"> 
+    	<div class="mobile-top-row row visible-xs">
+    		<div class="col-xs-2">
+        		<div class="top-alert-icon">
+        			<img src="../images/alert.svg" width="20"/><span2>3</span2>
+                </div>
+        	</div>
+            <div class="col-xs-8">
+        		<div class="nav-brand">
+                	<img src="../img/medicheck-logo.png" alt="Medicheck">
+                </div>
+        	</div>
+            <div class="col-xs-2">
+        		<div class="mobile-plus">
+                    <span><a href="#">+</a></span>                
+                  <ul class="dropdown">
+                    <li><a href="#">Add a new Appointment</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+        			
+                </div>
+        	</div>
+    	</div>
+    </div>
+    <div class="container-fluid">     
+        <div class="mobile-menu-row row visible-xs">
+        	<div class="col-xs-12">
+            	<ul>
+                	<li><a href="#"><i class="fa dasboard-icon"></i></a></li>
+                    <li><a href="#"><i class="fa schedule-icon"></i></a></li>
+                    <li><a href="#"><i class="fa patients-icon"></i></a></li>
+                    <li><a href="#"><i class="fa consultation-icon"></i></a></li>
+                    <li><a href="#"><i class="fa statistics-icon"></i></a></li>
+                    <li><a href="#"><i class="fa business-icon"></i></a></li>
+                    <li><a href="#"><i class="fa support-icon"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+    <!---Mobile Top Header------> 
+    <!---Desktop Top Header------>
+    <div class="container-fluid top-bg">   
+    	<div class="row hidden-xs">
+        	<div class="col-sm-7 col-lg-6">
+            	<div class="nav-brand">
+                	<img src="../img/medicheck-logo.png" alt="Medicheck">
+                </div>
+            
+            </div>
+            <div class="col-sm-5 col-lg-6 top-right-col">
+            	<img src="../images/alert.svg" width="20"/ class="top-alert-icon"><span2>3</span2>
+                <span>Emily</span>
+                <div class="triangle-icon">
+                    <figure></figure>                  
+                  <ul class="dropdown">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </div>
+               <img src="../img/top-profile-pic.png" class="top-profile-pic" /><span3>&nbsp;</span3>
+            </div>
+           		
+        </div>
+      <!---Mobile Top Header------>
+    </div>
+
+</header>
+<!--------Header End-------------->
+
+<!--------Left Nav Start-------------->
+	<div class="container-fluid container-gray push-body-toright push-padding full-width" id="pushcontainer">  	
+        <div class="pushMenu">
+            <button class="toggle-menu menu-left push-body menu-active">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+                  <i class="menu-icons"></i>
+            </button>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left menu-open">
+              <ul class="pushnav">
+                <li class="active">     
+                  <a href="#.">
+                    <i class="fa dasboard-icon"></i>
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa schedule-icon"></i>
+                    <span>My Schedule</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa patients-icon"></i>
+                    <span>My Patients</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa consultation-icon"></i>
+                    <span>Consultation</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa statistics-icon"></i>
+                    <span>Statistics</span>
+                  </a>
+                </li>
+                 <li>
+                  <a href="#.">
+                    <i class="fa business-icon"></i>
+                    <span>Business Admin</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa support-icon"></i>
+                    <span>Support</span>
+                  </a>
+                </li>
+              </ul>
+    	</nav>
+   </div>
+<!--------Left Nav End-------------->
+<!--------Inner Content Start-------------->
+<div class="border">
+	<div class="inner-content">
+          <div class="row title-row">
+        	 <div class="col-sm-12 col-lg-6 title-left-col">
+					<h1>Live Consultation</h1>
+              </div>
+                <div class="col-sm-12 col-lg-6 title-right-col">
+                	<a href="#" class="hcp-btn-close">Close Consultation</a>
+                </div>
+           </div>
+           <div class="clearfix"></div>
+           <div class="row">
+           		<div class="col-xs-12">
+                	<div class="hcp-live-consult-pat-pic">
+                    	<ul>
+                        	<li><img src="../img/hcp-live-consult-profile.png"/></li>
+                            <li><strong>Aster Doe</strong></li>
+                            <li><date>Tuesday</date>,<time> 10:00 - 10:10</time></li>	
+                        </ul>
+                        
+                    </div>
+                </div>
+           </div>
+             	<div class="row">
+                <div class="col-lg-8">
+                	   <div class="client-video-chat-wrap">
+                    	  <div class="client-video-chat">
+                          <video-1><img src="../img/hcp-live-consult.png"/></video-1>
+                           </div>
+                          <div class="video-icons">
+                          <span>00:02</span>
+                          <img src="../img/large-screen-icon.png" class="lg-screen-icon"/>
+                            <img src="../img/chat-icon.png" class="chat-icon"/>
+                            <img src="../img/video-chat-icon.png" class="video-chat-icon"/>
+                          </div>
+                    </div>
+                </div>
+        			<div class="col-lg-4">
+            			<h4>Messages</h4>
+                        <div class="chat-wrap"> 
+                        	<div class="chat">
+                             <div class="spacer20vh"></div>
+                            	<div class="doc-chat clearfix">
+                                    <img src="../img/pic-1.png"/>
+                                    <div class="bubble me">Hello there!</div>
+                                </div>
+                               
+                                <div class="pat-chat clearfix">
+                                    <img src="../img/pic-1.png"/>
+                                    <div class="bubble you">Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</div>
+                                </div>
+                              
+                                <div class="doc-chat clearfix">
+                                	<img src="../img/pic-1.png"/>
+                                    <div class="bubble me">Awesome.</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                            </div>
+                       </div>
+                    	<div class="chat-box-wrap">
+                        		<form>
+                            	<input type="text" placeholder="message" class="form-control chat-box"/>
+                            	<input type="submit" class="btn-chat" value="Send"/>
+                                </form>
+                    	</div>
+            		</div> 
+                    <div class="clearfix"></div>
+                    
+             </div>
+             
+             <div class="row">
+        			<div class="col-lg-4">
+            			<h4>Overview</h4>
+                        <div class="client-content-left-table-wrap table-responsive"> 
+                        	<table class="table table-bordered health-profile-table">    
+                                 <tbody>
+                                  <tr>
+                                    <td>
+                                        <p><strong>Height:</strong><br/>6'1"</p>
+                                        <p><strong>Weight:</strong><br/>180 lbs</p>
+                                        <p><strong>Are you allergic to pencillin?</strong><br/>No</p>
+                                        <p><strong>Are there any other pharmaceuticals that you are allergic to, or have experienced adverse from using?</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+                                        <p><strong>Do you have any other known allergy? (i.e. Pets, Pollen)</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. </p>
+                                        <p><strong>Do you have renal dysfunction?</strong><br/>No</p>
+                                         <p><strong>Do you have, or have had in the past, any serious health problem or disease? (i.e. High Blood Pressure, Dibetics)</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,</p>
+                                        <p><strong>Are you currently using  any prescription drugs?</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+                                        <p><strong>Are you smoking?</strong><br/>I used to Smoke</p>
+                                        <p><strong>Other medical information that you think could be useful for the doctor?</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
+                                    </td> 
+                                  </tr>                     
+                                 </tbody>
+                             </table> 
+                       </div>
+            		</div> 
+                    
+                    <div class="col-lg-4">
+            			<h4>Current medications</h4>
+                        <div class="client-content-left-table-wrap table-responsive"> 
+                        	<table class="table table-bordered health-profile-table">    
+                                 <tbody>
+                                  <tr>
+                                    <td>
+                                        <p><strong>Treatment / Drug Name:</strong><br/>Ciproxin, Eziday, Disprene</p>
+                                        <p><strong>Dose:</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                                        <p><strong>Treatment / Drug Name:</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                                        <p><strong>Disease:</strong><br/>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                                        <p><strong>Physician:</strong><br/>Dr. Alan</p>
+                                        <p><strong>Health Center:</strong><br/>ABC Healht center.</p>
+                                         
+                                    </td> 
+                                  </tr>                     
+                                 </tbody>
+                             </table> 
+                       </div>
+            		</div>
+                    
+                    
+                    <div class="col-lg-4">
+            			<h4>Documentation</h4>
+                        <div class="client-content-left-table-wrap table-responsive"> 
+                        	<table class="table table-bordered health-profile-table">    
+                                 <tbody>
+                                  <tr>
+                                    <td>
+                                     <p><strong><a href="#">Questionnaire.xls</a></strong><br/>
+                                     <strong><a href="#">Dibetics Reports.pdf</a></strong><br/>
+                                     <strong><a href="#">CT Scan.jpeg</a></strong><br/>
+                                     <strong><a href="#">Video1.mpeg</a></strong><br/>
+                                     <strong><a href="#">Video2.avi</a></strong><br/>
+                                     <strong><a href="#">Video3.mpeg</a></strong></p>
+                                    </td> 
+                                  </tr>                       
+                               </tbody>
+                            </table> 
+                       </div>
+                       <h4>Alfa e-Receipt</h4>
+                        <div class="client-content-left-table-wrap table-responsive"> 
+                        	<table class="table table-bordered hcp-alfa-card">    
+                                 <tbody>
+                                  <tr>
+                                    <td>
+                                     <p><strong>Receipt</strong> | <a href="#prescription-pop" data-lity>Add Prescription</a></p>
+                                    </td> 
+                                  </tr>                       
+                               </tbody>
+                            </table> 
+                       </div>
+                       
+                       
+                       <h4>Referrals</h4>
+                        <div class="client-content-left-table-wrap table-responsive"> 
+                        	<table class="table table-bordered hcp-referrals-card">    
+                                 <tbody>
+                                  <tr>
+                                    <td>
+                                     <p><strong>Default Referrals</strong> | <a href="#">Add Referrals</a></p>
+                                    </td> 
+                                  </tr>                       
+                               </tbody>
+                            </table> 
+                       </div>
+                       
+                       
+            		</div>
+                    
+                    
+             </div>
+ 
+
+          </div>
+         </div> 
+<!--------Inner Content End-------------->          
+  
+<!--------Main Fluid Container End-------------->     
+  </div> 
+<!--------Main Fluid Container End-------------->
+
+
+<!-------See A Doctor Popup Content----------->  
+    <div id="prescription-pop" class="lity-hide">
+    <div class="col-lg-12">
+       <form id="" action="" enctype="multipart/form-data" method="post">
+            <fieldset>     
+              <div class="form-group">
+                <div class="col-lg-12">
+                <label class="control-label">Drug Name</label>
+                 <input type="text" class="form-control">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="col-lg-6">
+                 <label class="control-label">Dose</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="col-lg-2">
+                  <div class="radio pres-radio">
+                    
+                      <input id="smoke-yes" type="radio" name="preferDoc">
+                      <label for="smoke-yes" class="radio-label">mg</label>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="radio pres-radio">
+                    
+                      <input id="smoke-no" type="radio" name="preferDoc">
+                     <label for="smoke-no" class="radio-label">ml</label>
+                  </div>
+                </div>
+                 <div class="col-lg-2">
+                  <div class="radio pres-radio">
+                    
+                      <input id="used-to-smoke" type="radio" name="preferDoc">
+                     <label for="used-to-smoke" class="radio-label">pcs</label>
+                  </div>
+                </div>
+              </div>
+               <div class="form-group">
+                <div class="col-lg-12">
+                 <label class="control-label">Treatment Notes</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+               <div class="clearfix"></div>
+               <div class="btn-client-edit-wrap">
+              <input type="button" name="save" class="btn-client-profile-save" value="Save and Close">
+                 </div>
+            </fieldset>
+          </form>
+     
+        
+         
+         
+        <button class="lity-close" type="button" title="Close (Esc)" data-lity-close="">×</button>
+    </div>
+</div>
+
+<!-------See A Doctor Popup Content-----------> 
+
+
+<!--------Script for Popup-------------->
+<script src="../js/lity.js"></script>
+<!--------Script for Popup-------------->
+
+
+
+<!--------Script For kebab Menu-------------->
+
+
+
+	 <script>
+		 jQuery(document).ready(function(){
+			 var kebab = jQuery('.kebab');
+			 var middle = jQuery('.middle');
+			 var cross = jQuery('.cross');
+			 var dropdown = jQuery('.dropdown');
+				 
+			 jQuery(kebab).each(function() {
+				 jQuery(this).click(function() {
+					 jQuery(this).children(middle).toggleClass('active');
+					 jQuery(this).children(cross).toggleClass('active');
+					 jQuery(this).children(dropdown).toggleClass('active');
+				  });
+			  });
+		  });
+      </script>
+
+ 	<script>
+		 jQuery(document).ready(function(){
+			 var kebab = jQuery('.mobile-plus');
+			 var middle = jQuery('.middle');
+			 var cross = jQuery('.cross');
+			 var dropdown = jQuery('.dropdown');
+				 
+			 jQuery(kebab).each(function() {
+				 jQuery(this).click(function() {
+					 jQuery(this).children(middle).toggleClass('active');
+					 jQuery(this).children(cross).toggleClass('active');
+					 jQuery(this).children(dropdown).toggleClass('active');
+				  });
+			  });
+		  });
+       </script>
+
+
+ 		<script>
+		 jQuery(document).ready(function(){
+			 var kebab = jQuery('.triangle-icon');
+			 var middle = jQuery('.middle');
+			 var cross = jQuery('.cross');
+			 var dropdown = jQuery('.dropdown');
+				 
+			 jQuery(kebab).each(function() {
+				 jQuery(this).click(function() {
+					 jQuery(this).children(middle).toggleClass('active');
+					 jQuery(this).children(cross).toggleClass('active');
+					 jQuery(this).children(dropdown).toggleClass('active');
+				  });
+			  });
+		  });
+       </script>
+ <!--------Script For kebab Menu-------------->  
+ 
+  <!--------Script For kebab Menu--------------> 
+  
+	<script src="../js/fileupload/jquery.knob.js"></script>
+    <!-- jQuery File Upload Dependencies -->
+    <script src="../js/fileupload/jquery.ui.widget.js"></script>
+    <script src="../js/fileupload/jquery.iframe-transport.js"></script>
+    <script src="../js/fileupload/jquery.fileupload.js"></script>
+    <!-- Our main JS file -->
+    <script src="../js/fileupload/script.js"></script>  
+        
+  <!--------Script For kebab Menu-------------->                 
+</body>
+</html>

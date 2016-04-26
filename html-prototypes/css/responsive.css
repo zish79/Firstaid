@@ -1,0 +1,234 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width:968px) and (max-width:1199px)
+{
+.email-subscription
+{
+	text-align:center;
+}
+.email-subscription p
+{
+	margin-bottom:20px !important;
+	margin-top:0 !important;
+}
+
+}
+@media all and (min-width:768px) and (max-width:967px)
+{
+.form-wrap
+{
+	width:80%;
+}
+
+.email-subscription
+{
+	text-align:center;
+}
+.email-subscription p
+{
+	margin-bottom:20px !important;
+	margin-top:0 !important;
+}
+}
+@media all and (max-width:767px)
+{
+.login-wrap
+{
+	background:none !important;
+}
+.form-wrap
+{
+	width:100% !important;
+}
+#msform .back.action-button, #msform .next.action-button
+{
+	padding:10px 40px;
+}
+p, a
+{
+	font-size:18px !important;
+}
+h1
+{
+	font-size:28px !important;
+}
+.navbar-toggle
+{
+	margin-top:15px !important;
+	background-color:#30c165 !important;
+}
+.navbar-default .navbar-toggle .icon-bar
+{
+	background-color:#fff !important;
+}
+.email-subscription
+{
+	text-align:center;
+}
+.email-subscription p
+{
+	margin-bottom:20px !important;
+	margin-top:0 !important;
+}
+.email-subscription .form-control
+{
+	display:inline !important;
+	width:auto !important;
+}
+
+
+
+
+
+.full-width
+{
+	padding:0;
+}
+.top-bg
+{
+	padding:0;
+}
+.mobile-top-bg
+{
+	
+	background-color: #ddd;
+    padding: 15px 20px;
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+}
+.nav-brand
+{
+	text-align:center;
+}
+.top-right-col
+{
+	display:none;
+}
+ 
+.push-body-toright.push-padding
+{
+	padding-left:auto !important;
+}
+.pushMenu
+{
+	display:none;
+}
+.mobile-menu-row
+{
+	text-align:center;
+}
+.mobile-top-row span a
+{
+	font-size: 24px;
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 0px 12px;
+
+}
+.mobile-menu-row ul
+{
+	padding-left:0 !important;
+	margin-bottom:5px;
+}
+.mobile-menu-row ul li
+{
+	list-style:none;
+	display:inline-block;
+	width:13%;
+}
+.mobile-menu-row ul > li > a i
+{
+	margin:0 auto;
+}
+.mobile-menu-row ul > li > a .dasboard-icon {
+    background: url("../images/dashboard.svg") no-repeat center bottom;
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-size:100%;
+}
+.mobile-menu-row ul > li > a .schedule-icon {
+    background: url("../images/schedule.svg") no-repeat center bottom;
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-size:100%;
+}
+.mobile-menu-row ul > li > a .patients-icon {
+    background: url("../images/patients.svg") no-repeat center bottom;
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-size:100%;
+}
+.mobile-menu-row ul > li > a .consultation-icon {
+    background: url("../images/consultations.svg") no-repeat center bottom;
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-size:100%;
+}
+.mobile-menu-row ul > li > a .statistics-icon {
+    background: url("../images/statistics.svg") no-repeat center bottom;
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-size:100%;
+}
+.mobile-menu-row ul > li > a .business-icon {
+    background: url("../images/business.svg") no-repeat center bottom;
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-size:100%;
+}
+.mobile-menu-row ul > li > a .support-icon{
+    background: url("../images/support.svg") no-repeat center bottom;
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-size:100%;
+}
+.nav-brand img
+{
+	width:175px;
+}
+.title-left-col, .title-right-col 
+{
+	display:none;
+}
+.inner-content
+{
+	margin-top:0;
+}
+
+
+}
+@media all and (max-width:480px)
+{
+#msform .back.action-button, #msform .next.action-button
+{
+	margin:20px 5px;
+	width:90%;
+}
+#msform fieldset
+{
+	padding:0;
+}
+.login-wrap a
+{
+	margin-left:0;
+	padding-bottom:30px;
+}
+.navbar-brand
+{
+	width:78%;
+}
+.email-subscription .form-control
+{
+	display:block !important;
+	width:100% !important;
+	margin-bottom:20px;
+}
+
+}

@@ -1,0 +1,74 @@
+<style>
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+</style>
+
+<!--<script type="text/ng-template">-->
+<div ng-controller="CalendarCtrl">
+    <!--<p>hi</p>-->
+        <!--<div class="modal-body">
+            <div class="innerWrap sub-modal">
+                <p>
+                Do you want to continue?
+                </p>
+                <form class="form-horizontal">
+                    <div class="row btn-col min-btn">
+                        <div class="col-sm-4 col-sm-offset-1 columns">
+                            <button class="ngdialog-button ngdialog-button-primary" type="" ng-click="ok()">Ok</button>
+                        </div>
+                        <div class="col-sm-5 col-sm-offset-1 columns">
+                            <button class="ngdialog-button ngdialog-button-primary" type="" ng-click="cancelDelete()">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>-->
+        
+        
+  <!--<uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>-->
+  
+  <pre class="alert alert-info">Selected day: {{selectedTime | date:'mediumDate'}} Selected Time: {{selectedTime | date:'shortTime'}}</pre>
+  <div >
+    <div style="float: left">
+        <span>Start Time</span>
+        <timepicker ng-model="selectedTime" ng-change="changed()"  minute-step="mstep" show-meridian="ismeridian" readonly ></timepicker>
+    </div>
+    
+    <div style="">
+        <span>End Time</span>
+        <timepicker ng-model="mytime" ng-change="changed()"  minute-step="mstep" show-meridian="ismeridian"></timepicker>
+    </div>
+  </div>
+  
+  <div class="row"> 
+    <!--<div class="col-xs-6">
+        Hours step is:
+      <select class="form-control" ng-model="hstep" ng-options="opt for opt in options.hstep"></select>
+    </div>-->
+    <div class="col-xs-6">
+        Minutes step is:
+      <select class="form-control" ng-model="mstep" ng-options="opt for opt in options.mstep"></select>
+    </div>
+    <div style="padding-top: 70px; padding-left: 14px; padding-right: 14px;">
+        <label>Appointment Description:</label>
+        <input type="text" ng-model="description" class="form-control">
+         
+    </div>
+  </div>
+
+  <hr>
+
+  <button type="button" class="btn btn-info" ng-click="toggleMode()">Make appintment</button>
+  <!--<button type="button" class="btn btn-default" ng-click="update()">Set to 14:00</button>
+  <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>-->
+
+</div>
+<!--</script>-->

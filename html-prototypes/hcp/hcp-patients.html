@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Medicheck Dashboard</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Main Style css--->
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- Fontawsome css--->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+
+<script src="../js/materialize.js"></script>
+<script src="../js/jPushMenu.js"></script>
+<script src="../js/custom.js"></script>
+
+</head>
+
+<body>
+<!--------Header Start-------------->
+<header>
+    <!---Mobile Top Header------>
+ 	<div class="container mobile-top-bg"> 
+    	<div class="mobile-top-row row visible-xs">
+    		<div class="col-xs-2">
+        		<div class="top-alert-icon">
+        			<img src="../images/alert.svg" width="20"/><span2>3</span2>
+                </div>
+        	</div>
+            <div class="col-xs-8">
+        		<div class="nav-brand">
+                	<img src="../img/medicheck-logo.png" alt="Medicheck">
+                </div>
+        	</div>
+            <div class="col-xs-2">
+        		<div class="mobile-plus">
+                    <span><a href="#">+</a></span>                
+                  <ul class="dropdown">
+                    <li><a href="#">Add a new Appointment</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+        			
+                </div>
+        	</div>
+    	</div>
+    </div>
+    <div class="container-fluid">     
+        <div class="mobile-menu-row row visible-xs">
+        	<div class="col-xs-12">
+            	<ul>
+                	<li><a href="#"><i class="fa dasboard-icon"></i></a></li>
+                    <li><a href="#"><i class="fa schedule-icon"></i></a></li>
+                    <li><a href="#"><i class="fa patients-icon"></i></a></li>
+                    <li><a href="#"><i class="fa consultation-icon"></i></a></li>
+                    <li><a href="#"><i class="fa statistics-icon"></i></a></li>
+                    <li><a href="#"><i class="fa business-icon"></i></a></li>
+                    <li><a href="#"><i class="fa support-icon"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+    <!---Mobile Top Header------> 
+    <!---Desktop Top Header------>
+    <div class="container-fluid top-bg">   
+    	<div class="row hidden-xs">
+        	<div class="col-sm-7 col-lg-6">
+            	<div class="nav-brand">
+                	<img src="../img/medicheck-logo.png" alt="Medicheck">
+                </div>
+            
+            </div>
+            <div class="col-sm-5 col-lg-6 top-right-col">
+            	<img src="../images/alert.svg" width="20"/ class="top-alert-icon"><span2>3</span2>
+                <span>Emily</span>
+                <div class="triangle-icon">
+                    <figure></figure>                  
+                  <ul class="dropdown">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </div>
+               <img src="../img/top-profile-pic.png" class="top-profile-pic" /><span3>&nbsp;</span3>
+            </div>
+           		
+        </div>
+      <!---Mobile Top Header------>
+    </div>
+
+</header>
+<!--------Header End-------------->
+
+<!--------Left Nav Start-------------->
+	<div class="container-fluid container-gray push-body-toright push-padding full-width" id="pushcontainer">  	
+        <div class="pushMenu">
+            <button class="toggle-menu menu-left push-body menu-active">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+                  <i class="menu-icons"></i>
+            </button>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left menu-open">
+              <ul class="pushnav">
+                <li class="active">     
+                  <a href="#.">
+                    <i class="fa dasboard-icon"></i>
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa schedule-icon"></i>
+                    <span>My Schedule</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa patients-icon"></i>
+                    <span>My Patients</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa consultation-icon"></i>
+                    <span>Consultation</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa statistics-icon"></i>
+                    <span>Statistics</span>
+                  </a>
+                </li>
+                 <li>
+                  <a href="#.">
+                    <i class="fa business-icon"></i>
+                    <span>Business Admin</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa support-icon"></i>
+                    <span>Support</span>
+                  </a>
+                </li>
+              </ul>
+    	</nav>
+   </div>
+<!--------Left Nav End-------------->
+
+<!--------Inner Content Start-------------->
+   <div class="inner-content">
+          <div class="row title-row">
+        	 <div class="col-sm-12 col-lg-6 title-left-col">
+				<h1>My Patients</h1>
+             </div>       
+             <div class="col-sm-12 col-lg-6 title-right-col">
+                <a href="#" class="hcp-appointment-btn">Add a New Appointment</a>
+             </div>
+         </div>
+         <div class="clearfix"></div>
+         <div class="row">
+         	<div class="col-lg-12">
+            	<form>
+                	<input type="search" class="hcp-patients-search" placeholder="Search"/>
+                </form>
+            </div>
+        	<div class="col-lg-10">
+                <div class="client-content-left-table-wrap table-responsive"> 
+                    <table class="table consultations-table hcp-patients-table">
+                      <thead>
+                          <tr>
+                            <th class="col-xs-3">Client Name</th>
+                            <th class="col-xs-2">Personal ID</th>
+                            <th class="col-xs-2">Last Consultation</th>
+                            <th class="col-xs-5">&nbsp;</th>
+                          </tr>
+                         </thead>
+                         <tbody>
+                          <tr>
+                            <td><img src="../img/pic-1.png"/><title>Adira</title></td>
+                            <td><span>720424-0178</span></td>
+                            <td><span>Tues. Feb 02</span></td>
+                            <td>
+                                <ul>
+                                    <li><a href="">Message</a></li>
+                                    <li><a href="">View</a></li>
+                                    <li><a href="">Invite</a></li>
+                                </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="../img/pic-1.png"/><title>Albany</title></td>
+                            <td><span>720424-0178</span></td>
+                            <td><span>Tues. Feb 02</span></td>    
+                            <td>
+                                <ul>
+                                    <li><a href="">Message</a></li>
+                                    <li><a href="">View</a></li>
+                                    <li><a href="">Invite</a></li>
+                                </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="../img/pic-1.png"/><title>Amabel</title></td>
+                            <td><span>720424-0178</span></td>
+                            <td><span>Tues. Feb 02</span></td>         
+                            <td>
+                                <ul>
+                                    <li><a href="">Message</a></li>
+                                    <li><a href="">View</a></li>
+                                    <li><a href="">Invite</a></li>
+                                </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="../img/pic-1.png"/><title>Albany</title></td>
+                            <td><span>720424-0178</span></td>
+                            <td><span>Tues. Feb 02</span></td>
+                            <td>
+                                <ul>
+                                    <li><a href="">Message</a></li>
+                                    <li><a href="">View</a></li>
+                                    <li><a href="">Invite</a></li>
+                                </ul>
+                            </td>
+                          </tr>
+                         </tbody>
+                     </table> 
+              	  </div>
+               </div>
+           </div>   
+	   </div>            
+   </div>
+</div>
+<!--------Script For kebab Menu-------------->
+ 		<script>
+		 jQuery(document).ready(function(){
+			 var kebab = jQuery('.triangle-icon');
+			 var middle = jQuery('.middle');
+			 var cross = jQuery('.cross');
+			 var dropdown = jQuery('.dropdown');
+				 
+			 jQuery(kebab).each(function() {
+				 jQuery(this).click(function() {
+					 jQuery(this).children(middle).toggleClass('active');
+					 jQuery(this).children(cross).toggleClass('active');
+					 jQuery(this).children(dropdown).toggleClass('active');
+				  });
+			  });
+		  });
+       </script>
+ <!--------Script For kebab Menu-------------->             
+</body>
+</html>

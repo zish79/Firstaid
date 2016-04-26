@@ -1,0 +1,61 @@
+<div ng-controller="AuthenticationController">
+  <section class="login-section">
+    <div class="container">
+        <div class="row">
+          <!-------See A Doctor Popup Content----------->  
+          <div class="log-wrap">         
+          <!--<form id="theForm" class="simform" autocomplete="off">-->
+          <form name="userForm" ng-submit="signinBankID(userForm)" class="simform" novalidate autocomplete="off">
+            <div class="simform-inner">
+                        <h1>Login</h1>
+              <div class="questions">
+                <div>
+                  <label for="q1" class="control-label">Please add your personal ID <span>(YYYYMMDDXXXX)</span></label>
+                  <input id="q1" name="q1" ng-model='credentials.bankId' type="text"/>
+                  <!--<input id="q1" name="q1" value="193205051232" type="text"/>-->
+                </div>
+              </div><!-- /questions -->
+                <div class="btn-client-edit-wrap">
+                <button class="submit" type="submit">Login</button>
+              </div>
+              <div class="controls">
+                <div class="progress"></div>
+                <span class="number">
+                  <span class="number-current" style="visibility:hidden;"></span>
+                  <span class="number-total" style="visibility:hidden;"></span>
+                </span>
+                <span class="error-message"></span>
+                  <button class="next show">Login</button>
+                  <a href="#" class="login-external-link" target="_blank">Mer information om BankID.</a>           
+              </div><!-- / controls -->
+              </div><!-- /simform-inner -->
+            <span class="final-message"></span>           
+          </form><!-- /simform -->			
+        </div>        
+      </div>
+    </div>            
+  </section>
+</div>
+
+
+<script>
+        var theForm = document.getElementById( 'theForm' );
+
+        new stepsForm( theForm, {
+            onSubmit : function( form ) {
+                // hide form
+                classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+                /*
+                form.submit()
+                or
+                AJAX request (maybe show loading indicator while we don't have an answer..)
+                */
+
+                // let's just simulate something...
+                var messageEl = theForm.querySelector( '.final-message' );
+                messageEl.innerHTML = '<strong>Thank You</strong><br/><br/>Please open your Bank ID and identify yourself.<br/>Enter you password and submit.<br/><br/>you will be logged in soon.<br/><img src="../img/ring.gif"/>';
+                classie.addClass( messageEl, 'show' );
+            }
+        } );
+</script>

@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Medicheck Dashboard</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Main Style css--->
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- Fontawsome css--->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+
+<script src="../js/materialize.js"></script>
+<script src="../js/jPushMenu.js"></script>
+<script src="../js/custom.js"></script>
+
+<!---------Range slider js------------->
+<script src="../js/rangeslider.min.js"></script>
+
+</head>
+
+<body>
+<!--------Header Start-------------->
+<header>
+    <!---Mobile Top Header------>
+ 	<div class="container mobile-top-bg"> 
+    	<div class="mobile-top-row row visible-xs">
+    		<div class="col-xs-2">
+        		<div class="top-alert-icon">
+        			<img src="../images/alert.svg" width="20"/><span2>3</span2>
+                </div>
+        	</div>
+            <div class="col-xs-8">
+        		<div class="nav-brand">
+                	<img src="../img/medicheck-logo.png" alt="Medicheck">
+                </div>
+        	</div>
+            <div class="col-xs-2">
+        		<div class="mobile-plus">
+                    <span><a href="#">+</a></span>                
+                  <ul class="dropdown">
+                    <li><a href="#">Add a new Appointment</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+        			
+                </div>
+        	</div>
+    	</div>
+    </div>
+    <div class="container-fluid">     
+        <div class="mobile-menu-row row visible-xs">
+        	<div class="col-xs-12">
+            	<ul>
+                	<li><a href="#"><i class="fa dasboard-icon"></i></a></li>
+                    <li><a href="#"><i class="fa schedule-icon"></i></a></li>
+                    <li><a href="#"><i class="fa patients-icon"></i></a></li>
+                    <li><a href="#"><i class="fa consultation-icon"></i></a></li>
+                    <li><a href="#"><i class="fa statistics-icon"></i></a></li>
+                    <li><a href="#"><i class="fa business-icon"></i></a></li>
+                    <li><a href="#"><i class="fa support-icon"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+    <!---Mobile Top Header------> 
+    <!---Desktop Top Header------>
+    <div class="container-fluid top-bg">   
+    	<div class="row hidden-xs">
+        	<div class="col-sm-7 col-lg-6">
+            	<div class="nav-brand">
+                	<img src="../img/medicheck-logo.png" alt="Medicheck">
+                </div>
+            
+            </div>
+            <div class="col-sm-5 col-lg-6 top-right-col">
+            	<img src="../images/alert.svg" width="20"/ class="top-alert-icon"><span2>3</span2>
+                <span>Emily</span>
+                <div class="triangle-icon">
+                    <figure></figure>                  
+                  <ul class="dropdown">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </div>
+               <img src="../img/top-profile-pic.png" class="top-profile-pic" /><span3>&nbsp;</span3>
+            </div>
+           		
+        </div>
+      <!---Mobile Top Header------>
+    </div>
+
+</header>
+<!--------Header End-------------->
+
+<!--------Left Nav Start-------------->
+	<div class="container-fluid container-gray push-body-toright push-padding full-width" id="pushcontainer">  	
+        <div class="pushMenu">
+            <button class="toggle-menu menu-left push-body menu-active">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+                  <i class="menu-icons"></i>
+            </button>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left menu-open">
+              <ul class="pushnav">
+                <li class="active">     
+                  <a href="#.">
+                    <i class="fa dasboard-icon"></i>
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa schedule-icon"></i>
+                    <span>My Schedule</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa patients-icon"></i>
+                    <span>My Patients</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa consultation-icon"></i>
+                    <span>Consultation</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa statistics-icon"></i>
+                    <span>Statistics</span>
+                  </a>
+                </li>
+                 <li>
+                  <a href="#.">
+                    <i class="fa business-icon"></i>
+                    <span>Business Admin</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#.">
+                    <i class="fa support-icon"></i>
+                    <span>Support</span>
+                  </a>
+                </li>
+              </ul>
+    	</nav>
+   </div>
+<!--------Left Nav End-------------->
+<!--------Inner Content Start-------------->
+   <div class="inner-content">
+          <div class="row title-row">
+        	 <div class="col-sm-12 col-lg-6 title-left-col">
+					<h1>Statistics</h1>
+             </div>       
+             <div class="col-sm-12 col-lg-6 title-right-col">
+                <a href="#" class="hcp-appointment-btn">Add a New Appointment</a>
+             </div>
+         </div>
+            <div class="clearfix"></div>
+             	<div class="row">
+        			<div class="col-lg-12">
+            			<h4>Consultations</h4>
+                        <div class="hcp-statistices-wrap">
+                        		<img src="../img/hcp-stats-graph-1.png" class="img-responsive"/>	
+           				</div>
+                    </div>
+        		</div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="stats-count-wrap">
+                    	<span>03</span><br/>
+                        <p>Drop in Consultations</p>
+                    </div>
+                   </div>
+                   <div class="col-lg-4">
+                    <div class="stats-count-wrap">
+                    	<span>18</span><br/>
+                        <p>Booked Clients</p>
+                    </div>
+                   </div> 
+                   <div class="col-lg-4">
+                    <div class="stats-count-wrap">
+                    	<span>25</span><br/>
+                        <p>Total Consultations</p>
+                    </div>
+                   </div>                    
+                 </div>
+                 	<div class="row">
+        			<div class="col-lg-12">
+            			<h4>Quick Stats</h4>
+                        <div class="hcp-statistices-wrap">
+                        		<img src="../img/hcp-stats-graph-2.png" class="img-responsive"/>	
+           				</div>
+                    </div>
+        		</div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="stats-count-wrap">
+                    	<span2>SEK</span2> <span>583</span><br/>
+                        <p>Earn this Month</p>
+                    </div>
+                   </div>
+                   <div class="col-lg-4">
+                    <div class="stats-count-wrap">
+                    	<span2>SEK</span2> <span>583</span><br/>
+                        <p>Earn this Year</p>
+                    </div>
+                   </div> 
+                   <div class="col-lg-4">
+                    <div class="stats-count-wrap">
+                    	<span2>SEK</span2> <span>583</span><br/>
+                        <p>Average Earnings</p>
+                    </div>
+                   </div>                    
+                 </div> 
+                 <div class="row">
+        			<div class="col-lg-7">
+            			<h4>Ratings</h4>
+                         <div class="hcp-statistices-wrap">
+                         <div class="current-rating-wrap">
+                                    <p>Current Rating
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    </p>
+                               	</div>
+                                <div class="clearfix"></div>
+                        <div class="row spacer15vh">
+                             <div class="col-sm-3 col-md-3 col-lg-3">
+                             	<div class="ratings-stars-wrap">
+                                	<i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                             </div>
+                             <div class="col-sm-7 col-md-7 col-lg-7">
+                               <div class="range-slider-wrap">
+                                    <input type="range" min="-20" max="0" class="range-slider">
+                                    <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-1">
+                                    <div class="rangeslider__fill" style="width: 20%;"></div>
+                                
+                                    </div>
+                               </div>
+                             </div>
+                             <div class="col-sm-2 col-md-2 col-lg-2">
+                               <span class="num-per">03%</span>
+                             </div>
+                        </div>
+                        <div class="row spacer15vh">
+                             <div class="col-sm-3 col-md-3 col-lg-3">
+                             	<div class="ratings-stars-wrap">
+                                	<i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                             </div>
+                             <div class="col-sm-7 col-md-7 col-lg-7">
+                               <div class="range-slider-wrap">
+                                    <input type="range" min="-20" max="0" class="range-slider">
+                                    <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-1">
+                                    <div class="rangeslider__fill" style="width:50%;"></div>
+                                  
+                                    </div>
+                               </div>
+                             </div>
+                             <div class="col-sm-2 col-md-2 col-lg-2">
+                               <span class="num-per">03%</span>
+                             </div>
+                        </div>
+                        <div class="row spacer15vh">
+                             <div class="col-sm-3 col-md-3 col-lg-3">
+                             	<div class="ratings-stars-wrap">
+                                	<i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                             </div>
+                             <div class="col-sm-7 col-md-7 col-lg-7">
+                               <div class="range-slider-wrap">
+                                    <input type="range" min="-20" max="0" class="range-slider">
+                                    <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-1">
+                                    <div class="rangeslider__fill" style="width:70%;"></div>
+                                    
+                                    </div>
+                               </div>
+                             </div>
+                             <div class="col-sm-2 col-md-2 col-lg-2">
+                               <span class="num-per">03%</span>
+                             </div>
+                        </div>
+                        <div class="row spacer15vh">
+                             <div class="col-sm-3 col-md-3 col-lg-3">
+                             	<div class="ratings-stars-wrap">
+                                	<i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                             </div>
+                             <div class="col-sm-7 col-md-7 col-lg-7">
+                               <div class="range-slider-wrap">
+                                    <input type="range" min="-20" max="0" class="range-slider">
+                                    <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-1">
+                                    <div class="rangeslider__fill" style="width:50%;"></div>
+                                   
+                                    </div>
+                               </div>
+                             </div>
+                             <div class="col-sm-2 col-md-2 col-lg-2">
+                               <span class="num-per">03%</span>
+                             </div>
+                        </div>
+                        <div class="row spacer15vh">
+                             <div class="col-sm-3 col-md-3 col-lg-3">
+                             	<div class="ratings-stars-wrap">
+                                	<i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                             </div>
+                             <div class="col-sm-7 col-md-7 col-lg-7">
+                               <div class="range-slider-wrap">
+                                    <input type="range" min="-20" max="0" class="range-slider">
+                                    <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-1">
+                                    <div class="rangeslider__fill" style="width:30%;"></div>
+                                 
+                                    </div>
+                               </div>
+                             </div>
+                             <div class="col-sm-2 col-md-2 col-lg-2">
+                               <span class="num-per">03%</span>
+                             </div>
+                        </div>
+                        
+                        
+                    </div>
+                     </div>
+                    <div class="col-lg-5">
+            			<h4>Views</h4>
+                        <div class="hcp-statistices-wrap">
+                        		<img src="../img/hco-stats-pie-graph-1.jpg" class="img-responsive"/>	
+           				</div>
+                    </div>
+        		</div>
+                 <div class="spacer40vh"></div>
+                  
+              </div>
+            </div>
+<!--------Script For kebab Menu-------------->
+
+
+    <script>
+		 jQuery(document).ready(function(){
+			 var kebab = jQuery('.kebab');
+			 var middle = jQuery('.middle');
+			 var cross = jQuery('.cross');
+			 var dropdown = jQuery('.dropdown');
+				 
+			 jQuery(kebab).each(function() {
+				 jQuery(this).click(function() {
+					 jQuery(this).children(middle).toggleClass('active');
+					 jQuery(this).children(cross).toggleClass('active');
+					 jQuery(this).children(dropdown).toggleClass('active');
+				  });
+			  });
+		  });
+      </script>
+
+ 	<script>
+		 jQuery(document).ready(function(){
+			 var kebab = jQuery('.mobile-plus');
+			 var middle = jQuery('.middle');
+			 var cross = jQuery('.cross');
+			 var dropdown = jQuery('.dropdown');
+				 
+			 jQuery(kebab).each(function() {
+				 jQuery(this).click(function() {
+					 jQuery(this).children(middle).toggleClass('active');
+					 jQuery(this).children(cross).toggleClass('active');
+					 jQuery(this).children(dropdown).toggleClass('active');
+				  });
+			  });
+		  });
+       </script>
+
+ 		<script>
+		 jQuery(document).ready(function(){
+			 var kebab = jQuery('.triangle-icon');
+			 var middle = jQuery('.middle');
+			 var cross = jQuery('.cross');
+			 var dropdown = jQuery('.dropdown');
+				 
+			 jQuery(kebab).each(function() {
+				 jQuery(this).click(function() {
+					 jQuery(this).children(middle).toggleClass('active');
+					 jQuery(this).children(cross).toggleClass('active');
+					 jQuery(this).children(dropdown).toggleClass('active');
+				  });
+			  });
+		  });
+       </script>
+ <!--------Script For kebab Menu-------------->             
+</body>
+</html>
